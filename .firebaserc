@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "niji-cut"
+  },
+  "targets": {
+    "niji-cut": {
+      "hosting": {
+        "niji-cut": [
+          "niji-cut"
+        ]
+      }
+    }
   }
 }
