@@ -127,6 +127,15 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/cdk@^10.0.2":
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-10.0.2.tgz#9d2770fc4ed6ccdaf1088cc8c68bcb9d28cb4c9c"
+  integrity sha512-ZvZkeh7qXllAGSOFvWSYurCslflTmB0JD3gonmUKOBl/O/AcOTPntP+iOrUaC3+eR3ohsfL5SswxChW0NF+oHQ==
+  dependencies:
+    tslib "^2.0.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~10.0.3":
   version "10.0.3"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-10.0.3.tgz#0b8c5e263deaa63d05b6efda790a2000b8a24a85"
@@ -217,6 +226,13 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/material@^10.0.2":
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-10.0.2.tgz#a240d6324c29508f716e1b61d005b0f8aca0bb47"
+  integrity sha512-xG8lCG+QS+r61aDoBauH6RyNuOHai4yxhn3e8cb2ua86liarJmF9jqlW0tB49tE1ZLz9U/+ybJKkos2kX1eF1Q==
+  dependencies:
+    tslib "^2.0.0"
+
 "@angular/platform-browser-dynamic@~10.0.4":
   version "10.0.4"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-10.0.4.tgz#77844511154eeb5eec5e68566767c215654f34e8"
@@ -252,6 +268,14 @@
   resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-10.0.4.tgz#a244ab83da9207a7a147786bdfdc3ef8c35e82e6"
   integrity sha512-KbjDiE49f/GRKm0Q162BRxfGaFLQSWmV+hCis5PNu4ag0kP/TYgPxabiSTc02R3Tom0mIRF3Q07DxNtnOkg0Hg==
   dependencies:
+    tslib "^2.0.0"
+
+"@angular/youtube-player@^10.0.2":
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/youtube-player/-/youtube-player-10.0.2.tgz#49c2871b9e8523ed02505c40d2094b6ae1d248d3"
+  integrity sha512-ErLv0Te3a11CFBtEPUAKGqtqupEAinfhty282rhVOzMJEM8kD229lxYBajwPMxbBEi11A9dA4vtKu2g6L4t8SQ==
+  dependencies:
+    "@types/youtube" "^0.0.38"
     tslib "^2.0.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.8.3":
@@ -1777,6 +1801,11 @@
     "@types/node" "*"
     "@types/source-list-map" "*"
     source-map "^0.6.1"
+
+"@types/youtube@^0.0.38":
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/@types/youtube/-/youtube-0.0.38.tgz#04aa5efa61f4d52e9cf682575a9dfed58f31e8c1"
+  integrity sha512-rS0nLlnnZIvOfBNT4957rkKRMHjHxutoVhSEzowocYgNiTMVBmN+Hbkf/L3TeGMMtts9uKZ9gw7O2JLHREVnIw==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -8794,7 +8823,7 @@ parse5@4.0.0:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==
 
-parse5@5.1.1:
+parse5@5.1.1, parse5@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
   integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
