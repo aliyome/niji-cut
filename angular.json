@@ -182,5 +182,12 @@
       }
     }
   },
-  "defaultProject": "niji-cut"
+  "defaultProject": "niji-cut",
+  "schematics": {
+    "@schematics/angular:component": {
+      "changeDetection": "OnPush",
+      "displayBlock": true,
+      "style": "scss"
+    }
+  }
 }
