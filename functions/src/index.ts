@@ -1,9 +1,19 @@
 import * as functions from 'firebase-functions';
+import { createVm } from './gce';
+import { storeJob } from './firestore';
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+const TOKYO = 'asia-northeast1';
+
+export const register = functions
+  .region(TOKYO)
+  .https.onCall(async (job, context) => {
+    try {
+      const uid = context.auth?.uid;
+      const jobId = (await storeJob(job, uid)).toLowerCase();
+      await createVm(jobId);
+      return jobId;
+    } catch (err) {
+      functions.logger.error(err);
+      return null;
+    }
+  });

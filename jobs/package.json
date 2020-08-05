@@ -1,0 +1,29 @@
+{
+  "name": "jobs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@google-cloud/compute": "^2.0.2",
+    "@google-cloud/storage": "^5.1.2",
+    "@types/lodash": "^4.14.158",
+    "dayjs": "^1.8.30",
+    "ffmpeg-static": "^4.2.6",
+    "ffprobe-static": "^3.0.0",
+    "firebase-admin": "^9.0.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "lodash": "^4.17.19",
+    "ytdl-core": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/ffmpeg-static": "^3.0.0",
+    "@types/ffprobe-static": "^2.0.0",
+    "@types/fluent-ffmpeg": "^2.1.14",
+    "tslint": "^5.12.0",
+    "typescript": "^3.8.0"
+  },
+  "private": true
+}

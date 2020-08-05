@@ -113,3 +113,10 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# firebase
+firebase.ts
+
+# sa
+niji-cut-09c79aed0cf4.json
+niji-cut-firebase-adminsdk-asiw8-bbcf1b23b4.json
