@@ -1,0 +1,14 @@
+[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: Converted at http://convert.jamack.net
+ScriptType: v4.00+
+Collisions: Normal
+PlayDepth: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Noto Sans Jp,32,&H00FFFFFF,&H0300FFFF,&H00000000,&H02000000,900,0,0,0,100,100,0,0,1,4,1,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,00:00:00.06,00:00:12.63,Default,,0,0,0,,今なら釣りが一番上手い

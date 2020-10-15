@@ -1,0 +1,7 @@
+<mat-list>
+  <div mat-subheader>切り抜き一覧</div>
+  <mat-list-item *ngFor="let job of jobs$ | async">
+    <div mat-line>id: {{ job.id }}</div>
+    <div mat-line>サムネ合ったほうが良さそう</div>
+  </mat-list-item>
+</mat-list>

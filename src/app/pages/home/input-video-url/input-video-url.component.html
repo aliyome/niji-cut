@@ -1,0 +1,12 @@
+<!-- <div>切り抜きたい配信のURLを入力してください</div> -->
+<form [formGroup]="form" (submit)="onSubmit()">
+  <mat-form-field style="width: 30em;">
+    <mat-label>切り抜きたいYouTube配信のURL</mat-label>
+    <input
+      matInput
+      formControlName="url"
+      placeholder="https://youtu.be/h5eU1sla7ME"
+    />
+  </mat-form-field>
+  <button mat-button type="submit">決定</button>
+</form>

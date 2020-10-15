@@ -1,0 +1,10 @@
+<div>
+  <app-player
+    #previewlayer
+    [videoId]="videoId"
+    [scene]="currentScene"
+    [subtitles]="subtitles"
+  ></app-player>
+</div>
+
+<button (click)="startPreview()">start</button>

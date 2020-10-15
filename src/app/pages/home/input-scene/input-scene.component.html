@@ -1,0 +1,53 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+  <mat-form-field style="width: 8em;">
+    <mat-label>シーンID</mat-label>
+    <input matInput formControlName="id" readonly />
+  </mat-form-field>
+
+  <mat-form-field style="width: 8em;">
+    <mat-label>シーン名</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+
+  <mat-form-field style="width: 8em;">
+    <mat-label>ここから</mat-label>
+    <input matInput formControlName="from" placeholder="01:23:45.678" />
+    <button
+      mat-icon-button
+      matSuffix
+      type="button"
+      (click)="syncCurrentTime('from')"
+      [attr.aria-label]="'pick from current time.'"
+      matTooltip="現在の再生時間を設定する"
+    >
+      <mat-icon>get_app</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field style="width: 8em;">
+    <mat-label>ここまで</mat-label>
+    <input matInput formControlName="to" placeholder="01:23:45:678" />
+    <button
+      mat-icon-button
+      matSuffix
+      type="button"
+      (click)="syncCurrentTime('to')"
+      [attr.aria-label]="'pick from current time.'"
+      matTooltip="現在の再生時間を設定する"
+    >
+      <mat-icon>get_app</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <button mat-button type="button" (click)="onEdit()">シーンを編集</button>
+  <button mat-button type="button" (click)="onAdd()">シーンを追加</button>
+  <button mat-button type="button" (click)="onDelete()">シーンを削除</button>
+
+  <!-- <ng-container *ngIf="mode === 'scene-add'">
+    <button mat-button type="submit">シーンを追加</button>
+  </ng-container>
+  <ng-container *ngIf="mode === 'scene-edit'">
+    <button mat-button type="submit">シーンを編集</button>
+    <button mat-button type="button" (click)="onDelete()">シーンを削除</button>
+  </ng-container> -->
+</form>

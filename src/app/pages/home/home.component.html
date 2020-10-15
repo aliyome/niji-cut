@@ -1,1 +1,54 @@
-<p>home works!</p>
+<app-input-video-url (submitVideoId)="setVideoId($event)"></app-input-video-url>
+
+<!-- <div style="display: flex; flex-wrap: wrap;">
+  <ng-container *ngIf="videoId$ | async as videoId">
+    <div class="left">
+      <app-player
+        #player
+        [videoId]="videoId"
+        [scene]="scene$ | async"
+        [subtitles]="subtitles$ | async"
+      ></app-player>
+    </div>
+    <ng-container *ngIf="scenes$ | async as scenes">
+      <div class="col">
+        <app-scene
+          [scenes]="scenes"
+          (selectScene)="onSelectScene($event)"
+        ></app-scene>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="subtitles$ | async as subtitles">
+      <div class="col">
+        <app-subtitle
+          [subtitles]="subtitles"
+          (subtitleSelect)="onSelectSubtitle($event)"
+        ></app-subtitle>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-container *ngIf="videoId$ | async">
+  <app-input-scene
+    [scene]="scene$ | async"
+    [player]="player"
+    (add)="commitScene($event)"
+    (edit)="commitScene($event)"
+    (delete)="deleteScene($event)"
+  >
+  </app-input-scene>
+  <app-input-subtitle
+    [subtitle]="subtitle"
+    [player]="player"
+    (add)="commitSubtitle($event)"
+    (edit)="commitSubtitle($event)"
+    (delete)="deleteSubtitle($event)"
+  ></app-input-subtitle>
+
+  <button mat-button (click)="register()">投稿</button>
+</ng-container> -->
+
+<ng-container *ngIf="videoId$ | async as videoIdA">
+  <app-preview [videoId]="videoIdA"></app-preview>
+</ng-container>

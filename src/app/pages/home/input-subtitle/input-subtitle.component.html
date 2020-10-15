@@ -1,0 +1,53 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+  <mat-form-field style="width: 8em;">
+    <mat-label>字幕ID</mat-label>
+    <input matInput formControlName="id" readonly />
+  </mat-form-field>
+
+  <mat-form-field style="width: 8em;">
+    <mat-label>ここから</mat-label>
+    <input matInput formControlName="from" />
+    <button
+      mat-icon-button
+      matSuffix
+      type="button"
+      (click)="syncCurrentTime('from')"
+      [attr.aria-label]="'pick from current time.'"
+      matTooltip="現在の再生時間を設定する"
+    >
+      <mat-icon>get_app</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field style="width: 8em;">
+    <mat-label>ここまで</mat-label>
+    <input matInput formControlName="to" />
+    <button
+      mat-icon-button
+      matSuffix
+      type="button"
+      (click)="syncCurrentTime('to')"
+      [attr.aria-label]="'pick from current time.'"
+      matTooltip="現在の再生時間を設定する"
+    >
+      <mat-icon>get_app</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>text</mat-label>
+    <input matInput formControlName="text" />
+  </mat-form-field>
+
+  <button mat-button type="button" (click)="onEdit()">字幕を編集</button>
+  <button mat-button type="button" (click)="onAdd()">字幕を追加</button>
+  <button mat-button type="button" (click)="onDelete()">字幕を削除</button>
+
+  <!-- <ng-container *ngIf="mode === 'subtitle-add'">
+    <button mat-button type="submit">字幕を追加</button>
+  </ng-container>
+  <ng-container *ngIf="mode === 'subtitle-edit'">
+    <button mat-button type="submit">字幕を編集</button>
+    <button mat-button type="button" (click)="onDelete()">字幕を削除</button>
+  </ng-container> -->
+</form>

@@ -21,7 +21,7 @@
     </mat-sidenav>
     <mat-sidenav-content style="min-height: 100vh;">
       <mat-toolbar color="primary">
-        <button
+        <!-- <button
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
@@ -29,8 +29,14 @@
           *ngIf="isHandset$ | async"
         >
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <span>niji-cut</span>
+        </button> -->
+        <span>NijiCut</span>
+        <span style="flex: 1;"></span>
+        <ng-container *ngIf="user$ | async as user">
+          <a mat-button (click)="navigateToHome()">切り抜く</a>
+          <a mat-button (click)="navigateToList()">切り抜き一覧</a>
+          <button mat-button (click)="logout()">利用終了</button>
+        </ng-container>
       </mat-toolbar>
       <!-- Add Content Here -->
       <router-outlet></router-outlet>

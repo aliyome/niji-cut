@@ -1,0 +1,17 @@
+<!-- (selectionChange)="onSelectChange()" -->
+<mat-selection-list [formControl]="form" [multiple]="false" dense>
+  <div mat-subheader>シーン一覧</div>
+  <mat-list-option
+    *ngFor="let scene of scenes"
+    [value]="scene"
+    (click)="onClick(scene)"
+  >
+    <mat-icon mat-list-icon>movie</mat-icon>
+    <div mat-line>
+      <span>{{ scene.name }}</span>
+    </div>
+    <div mat-line>
+      <span>{{ scene.from }} - {{ scene.to }}</span>
+    </div>
+  </mat-list-option>
+</mat-selection-list>

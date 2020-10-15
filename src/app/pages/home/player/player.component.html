@@ -1,0 +1,10 @@
+<div class="fixed">
+  <div class="subtitle-overlay">
+    <div class="subtitle-wrapper" *ngFor="let sub of currentSubtitles$ | async">
+      <span class="subtitle">
+        {{ sub.text }}
+      </span>
+    </div>
+  </div>
+  <youtube-player [videoId]="videoId" [width]="720" #preview></youtube-player>
+</div>

@@ -10,14 +10,32 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
+
+const materials = [
+  BrowserAnimationsModule,
+  LayoutModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatSlideToggleModule,
+  MatIconModule,
+  MatListModule,
+];
 
 @NgModule({
-  declarations: [AppComponent, NavComponent],
+  declarations: [AppComponent, NavComponent, AboutComponent, LoginComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
@@ -25,14 +43,12 @@ import { NavComponent } from './nav/nav.component';
       enabled: environment.production,
     }),
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatIconModule,
-    MatListModule,
+    ...materials,
+    environment.production ? [] : AkitaNgDevtools.forRoot(),
+    AkitaNgRouterStoreModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireAuthGuardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
